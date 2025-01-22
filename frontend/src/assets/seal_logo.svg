@@ -5,8 +5,9 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:krita="http://krita.org/namespaces/svg/krita"
     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-    viewBox="0 0 44.64 44.64"
-    style="width: 225px; height: auto;">
+    width="44.64pt"
+    height="44.64pt"
+    viewBox="0 0 44.64 44.64">
 <defs>
   <mask id="clipmask0" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" x="0" y="0" width="60" height="60">
       <defs/>
