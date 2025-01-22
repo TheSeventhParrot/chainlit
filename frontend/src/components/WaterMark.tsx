@@ -1,9 +1,9 @@
 import { Translator } from 'components/i18n';
 
-import 'assets/logo_dark.svg';
-import LogoDark from 'assets/logo_dark.svg?react';
-import 'assets/logo_light.svg';
-import LogoLight from 'assets/logo_light.svg?react';
+import 'assets/Red Logo.svg';
+import LogoDark from 'assets/Red Logo.svg?react';
+import 'assets/Logo.svg';
+import LogoLight from 'assets/Logo.svg?react';
 
 import { useTheme } from './ThemeProvider';
 
@@ -13,7 +13,7 @@ export default function WaterMark() {
 
   return (
     <a
-      href="https://github.com/Chainlit/chainlit"
+      href="https://www.promptinversion.ai/"
       target="_blank"
       className="watermark"
       style={{

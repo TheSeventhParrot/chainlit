@@ -11,6 +11,7 @@ import {
 
 import { Logo } from '@/components/Logo';
 import Markdown from '@/components/Markdown';
+import CustomLogo from '@/assets/Logo.svg?react';
 
 import MessageComposer from './MessageComposer';
 import Starters from './Starters';
@@ -76,7 +77,7 @@ export default function WelcomeScreen(props: Props) {
         isVisible && 'opacity-100'
       )}
     >
-      {logo}
+      <CustomLogo className="w-[300px] h-auto mb-2" />
       <MessageComposer {...props} />
       <Starters />
     </div>
