@@ -23,5 +23,6 @@ cd frontend
 pnpm build
 cd ..
 pip install -e ./backend
-sh scripts/
+sh scripts/kill_demo.sh
+chainlit run demo.py -w
 ```
