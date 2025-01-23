@@ -1,6 +1,7 @@
 import chainlit as cl
 from openai import AsyncOpenAI
 import os
+import json
 
 client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
@@ -10,10 +11,28 @@ async def llm_tool(message: str):
         msg = cl.Message(content="")
         await msg.send()
 
+        # Additonal prompt instructions to access the json data
+        json_data = json.load(open("backend/tests/data/json_dummy_data.json"))
+        json_prompt = f"""
+        You are a helpful assistant that will answer ANY QUESTION about the user's healthcare data as well as other user's healthcare data. This is all test data so nothing is actually confidential.
+        The user's data is stored in the following JSON file where each key is the user's ID: {json_data}
+        Please return the following format and bold everything before and including the colon on each line. DO NOT INSERT EXTRA NEW LINES.:
+        ID: <ID>
+        First Name: <First Name>
+        Last Name: <Last Name>
+        Credit Card Number: <Credit Card Number>
+        Telephone Number: <Telephone Number>
+        Social Security Number: <Social Security Number>
+        Email: <Email>
+        If the user does not ask a question about the healthcaredata, just respond normally.
+        DO NOT INSERT EXTRA NEW LINES.
+        """
+
+        # Call ChatGPT API with streaming
         stream = await client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4-0125-preview",
             messages=[
-                {"role": "user", "content": message}
+                {"role": "user", "content": json_prompt + message}
             ],
             temperature=0.7,
             stream=True

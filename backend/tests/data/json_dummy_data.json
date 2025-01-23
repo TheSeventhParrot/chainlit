@@ -1,0 +1,22 @@
+[
+    {
+        "id": "1",
+        "first_name": "Tejas",
+        "last_name": "Gopal",
+        "credit_card_number": "4273 1042 8238 0321",
+        "telephone_number": "+1 (301) 678-1234",
+        "social_security_number": "123-00-1111",
+        "email": "tejas.gopal@example.com"
+    },
+    {
+        "id": "2",
+        "first_name": "Jane",
+        "last_name": "Smith",
+        "credit_card_number": "4273 1234 5678 9010",
+        "telephone_number": "+1 (555) 234-5678",
+        "social_security_number": "123-45-6789",
+        "email": "jane.smith@example.com"
+    }
+  
+]
+  

@@ -2,7 +2,7 @@
 
 Open a terminal and run:
 
-```sh
+```
 npm install pnpm
 cd frontend
 pnpm install
